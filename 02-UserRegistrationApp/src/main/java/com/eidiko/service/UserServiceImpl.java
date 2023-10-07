@@ -57,7 +57,7 @@ public class UserServiceImpl implements IUserService {
 
 		user.setUsername(usr.getUsername());
 		user.setPassword(usr.getPassword());
-		user.setEmail(usr.getPassword());
+		user.setEmail(usr.getEmail());
 		user.setMobileNo(usr.getMobileNo());
 		userRepo.save(user);
 		return "User updated Successfully";
