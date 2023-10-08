@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Template</title>
+    <style>
+        /* Add your CSS styles here */
+        .email-container {
+            background-color: #f7f7f7;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .email-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .email-content {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .email-signature {
+            font-style: italic;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>Email Subject: <span th:text="${subject}"></span></h1>
+        </div>
+        <div class="email-content">
+            <h2>Hello <span th:text="${name}"></span>,</h2>
+            <p><span th:text="${mailBody}"></span></p>
+            <p>If you have any questions, feel free to contact us.</p>
+        </div>
+        <div class="email-signature">
+            <p>Thanks & Regards</p>
+            <p>Samarkanta Rout</p>
+        </div>
+    </div>
+</body>
+</html>
